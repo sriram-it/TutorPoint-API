@@ -12,6 +12,7 @@ app.use(express.urlencoded({
 //routers
 userRouter.routeConfig(app)
 
-app.listen(3000, ()=> {
+var port = process.env.PORT || 3000
+app.listen(port, ()=> {
     console.log("Server is up and running on 3000")
 });
