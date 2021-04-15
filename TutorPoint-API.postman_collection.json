@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "a782c99c-4260-49cb-94e5-a796ee92a93d",
+		"name": "TutorPoint-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testDeployment\",\r\n    \"email\": \"td@gmail.com\",\r\n    \"password\": \"pass123\",\r\n    \"bio\": \"akjshdkjsahkdhaskjhd\",\r\n    \"country\": \"Canada\",\r\n    \"languages\": [\r\n        \"Tamil\",\r\n        \"English\"\r\n    ],\r\n    \"userType\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/createUser",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getUser?id=6078ad24865a1b0022b4045e",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"getUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6078ad24865a1b0022b4045e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getUsers",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"getUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"td@gmail.com\",\r\n    \"password\": \"pass123\"\r\n}"
+						},
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/login",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
