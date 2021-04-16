@@ -133,6 +133,142 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"languages\": [\r\n        \"Tamil\",\r\n        \"English\",\r\n        \"French\"\r\n    ],\r\n    \"_id\": \"6079406b0eaa230022fa7be2\",\r\n    \"name\": \"test Sriram\",\r\n    \"email\": \"tSrir@gmail.com\",\r\n    \"password\": \"pass1234\",\r\n    \"bio\": \"akjshdkjsahkdhaskjhd\",\r\n    \"country\": \"Canada\",\r\n    \"userType\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/updateUser",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "getCourses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getCourses",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"getCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCourse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"React\",\r\n    \"description\": \"Skajshdkjsahjkdhsajkhdjksahkjdhsak\",\r\n    \"category\": \"Front End Technology\",\r\n    \"hours_expected\": 20,\r\n    \"students_capacity\": 2,\r\n    \"charge_per_hour\": 14,\r\n    \"status\": \"active\",\r\n    \"tutor_id\": \"6078ad24865a1b0022b4045e\",\r\n    \"time_slot\": [\r\n        {\"day\":\"monday\", \"time\":\"10-12\"},\r\n        {\"day\":\"tuseday\", \"time\":\"11-14\"},\r\n        {\"day\":\"wednesday\", \"time\":\"16-18\"},\r\n        {\"day\":\"thursday\", \"time\":\"\"},\r\n        {\"day\":\"friday\", \"time\":\"\"},\r\n        {\"day\":\"saturday\", \"time\":\"\"},\r\n        {\"day\":\"sunday\", \"time\":\"10-12\"}\r\n    ]    \r\n}"
+						},
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/createCourse",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"createCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCourse",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getCourse?id=60793fa20eaa230022fa7be1",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"getCourse"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "60793fa20eaa230022fa7be1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
