@@ -80,6 +80,21 @@ exports.verifyUser = (req, res) => {
     return;
 }
 
-
+exports.updateUser = (req, res) => {
+    console.log(req.body)
+    userModel.updateUser(req.body).then((result) => {
+        res.status(200).send({
+            status: "success",
+            user: result
+        })
+    }).catch((error) => {
+        console.log(error)
+        res.status(200).send({
+            status: "failed",
+            errors: "Internal Server Error"
+        })    
+    })
+    return;
+}
 
 // exports.testAPI = this.testAPI

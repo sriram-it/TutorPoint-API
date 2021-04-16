@@ -1,6 +1,8 @@
 var express =  require('express')
 const bodyParser = require('body-parser')
 var userRouter = require('./routers/UserRouter')
+var courseRouter = require('./routers/CourseRouter')
+
 
 
 var app = express();
@@ -11,6 +13,7 @@ app.use(express.urlencoded({
 
 //routers
 userRouter.routeConfig(app)
+courseRouter.routeConfig(app)
 
 var port = process.env.PORT || 3000
 app.listen(port, ()=> {

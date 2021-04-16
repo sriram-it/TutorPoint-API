@@ -30,3 +30,7 @@ exports.getUserById = (id) => {
 exports.verifyUser = (email, password) => {
     return userModel.find({email: email, password: password})
 }
+
+exports.updateUser = (userData) =>  {
+    return userModel.findOneAndUpdate({_id: userData._id}, userData,{new: true})
+}
