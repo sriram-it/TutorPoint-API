@@ -2,7 +2,7 @@ const courseModel = require('../models/CourseModel')
 
 exports.createCourse = (req, res) => {
     console.log(req.body)
-    courseModel.createUser(req.body).then((result) => {
+    courseModel.createCourse(req.body).then((result) => {
         res.status(200).send({
             status: "success",
             course: result
