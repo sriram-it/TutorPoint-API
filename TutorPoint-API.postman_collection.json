@@ -217,7 +217,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"TEST\",\r\n    \"description\": \"This is a TEST Course\",\r\n    \"category\": \"TEST\",\r\n    \"hours_expected\": 20,\r\n    \"students_capacity\": 2,\r\n    \"charge_per_hour\": 14,\r\n    \"status\": \"active\",\r\n    \"tutor_id\": \"607bad534c449a00223fd8a9\",\r\n    \"time_slot\": [\r\n        {\"day\":\"monday\", \"time\":\"10-12\"},\r\n        {\"day\":\"tuseday\", \"time\":\"11-14\"},\r\n        {\"day\":\"wednesday\", \"time\":\"16-18\"},\r\n        {\"day\":\"thursday\", \"time\":\"\"},\r\n        {\"day\":\"friday\", \"time\":\"\"},\r\n        {\"day\":\"saturday\", \"time\":\"\"},\r\n        {\"day\":\"sunday\", \"time\":\"10-12\"}\r\n    ]    \r\n}"
+							"raw": "{\r\n    \"title\": \"TEST\",\r\n    \"description\": \"This is a TEST Course\",\r\n    \"category\": \"TEST\",\r\n    \"hours_expected\": 20,\r\n    \"students_capacity\": 2,\r\n    \"charge_per_hour\": 14,\r\n    \"status\": \"active\",\r\n    \"tutor_id\": \"607bad534c449a00223fd8a9\",\r\n    \"video_link\": \"https://www.youtube.com/watch?v=eIrMbAQSU34\",\r\n    \"time_slot\": [\r\n        {\"day\":\"monday\", \"time\":\"10-12\"},\r\n        {\"day\":\"tuseday\", \"time\":\"11-14\"},\r\n        {\"day\":\"wednesday\", \"time\":\"16-18\"},\r\n        {\"day\":\"thursday\", \"time\":\"\"},\r\n        {\"day\":\"friday\", \"time\":\"\"},\r\n        {\"day\":\"saturday\", \"time\":\"\"},\r\n        {\"day\":\"sunday\", \"time\":\"10-12\"}\r\n    ]    \r\n}"
 						},
 						"url": {
 							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/createCourse",
