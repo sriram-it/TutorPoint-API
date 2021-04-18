@@ -15,7 +15,8 @@ const options = {
 
 
 const connect = () => {
-    mongoose.connect('mongodb+srv://root:root@sriramdb2.ub7qg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', options);
+ //   mongoose.connect('mongodb+srv://root:root@sriramdb2.ub7qg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', options);
+    mongoose.connect('mongodb+srv://arun1:testPass123@cluster0.zskuf.mongodb.net/tutorpoint?retryWrites=true&w=majority', options);
     const db = mongoose.connection;
     db.on('error', function() {
         console.log("ERROR:: Error while Connecting Database")
