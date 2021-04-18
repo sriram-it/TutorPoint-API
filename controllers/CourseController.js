@@ -51,3 +51,58 @@ exports.getCourseById = (req, res) => {
     })
     return;
 }
+
+
+exports.getCourseByTutorId = (req, res) => {
+    console.log(req.query.tutorId)
+    courseModel.getCourseByTutorId(req.query.tutorId).then((result) => {
+        console.log(result)
+        res.status(200).send({
+            status: "success",
+            user: result
+        })
+    }).catch((error) => {
+        console.log(error)
+        res.status(200).send({
+            status: "failed",
+            errors: "Internal Server Error"
+        })    
+    })
+    return;
+}
+
+
+exports.updateCourse = (req, res) => {
+    console.log(req.body)
+    courseModel.updateCourse(req.body).then((result) => {
+        res.status(200).send({
+            status: "success",
+            user: result
+        })
+    }).catch((error) => {
+        console.log(error)
+        res.status(200).send({
+            status: "failed",
+            errors: "Internal Server Error"
+        })    
+    })
+    return;
+}
+
+
+exports.deleteCourse = (req, res) => {
+    console.log(req.query.id)
+    courseModel.deleteCourse(req.query.id).then((result) => {
+        res.status(200).send({
+            status: "success",
+            user: result
+        })
+    }).catch((error) => {
+        console.log(error)
+        res.status(200).send({
+            status: "failed",
+            errors: "Internal Server Error"
+        })    
+    })
+    return;
+}
