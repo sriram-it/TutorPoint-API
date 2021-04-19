@@ -177,34 +177,6 @@
 			"name": "Courses",
 			"item": [
 				{
-					"name": "getCourses",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getCourses",
-							"protocol": "https",
-							"host": [
-								"tutor-point-api",
-								"herokuapp",
-								"com"
-							],
-							"path": [
-								"tutorPoint",
-								"api",
-								"getCourses"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "createCourse",
 					"request": {
 						"method": "POST",
@@ -353,6 +325,38 @@
 									"key": "id",
 									"value": "607bb5293224ed0022c8a083"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCourses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromPrice\": \"10\",\r\n    \"toPrice\": \"20\",\r\n    \"category\": \"Technology\"\r\n}"
+						},
+						"url": {
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getCourses",
+							"protocol": "https",
+							"host": [
+								"tutor-point-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tutorPoint",
+								"api",
+								"getCourses"
 							]
 						}
 					},
