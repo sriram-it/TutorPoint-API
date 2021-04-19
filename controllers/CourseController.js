@@ -1,4 +1,5 @@
 const courseModel = require('../models/CourseModel')
+const userModel = require('../models/UserModel')
 
 exports.createCourse = (req, res) => {
     console.log(req.body)
@@ -17,8 +18,47 @@ exports.createCourse = (req, res) => {
     return;
 }
 
+/*exports.getCourses = (req, res) => {
+    courseModel.getCourses(req.body).then((courses) => {
+        let response = []
+        if(courses.length > 0 && req.body.country != "") { 
+            console.log("Inner")
+            for(let i = 0; i < courses.length; i++) {
+                console.log(courses[i].tutor_id)
+                userModel.filterUserByIdAndCountry(courses[i].tutor_id, req.body.country).then((user) => {
+                    console.log("USERRR")
+                    response.push(courses[i])
+                })
+            }
+        }
+        console.log("responseee")
+        console.log(response)
+        if(response.length > 0) {
+            res.status(200).send({
+                status: "success",
+                courses: response
+            })
+        } else {
+            res.status(200).send({
+                status: "success",
+                courses: courses
+            })
+        }
+
+    }).catch((error) => {
+        console.log(error)
+        res.status(200).send({
+            status: "failed",
+            errors: "Internal Server Error"
+        })    
+    })
+    return;
+}*/
+
+
 exports.getCourses = (req, res) => {
-    courseModel.getCourses().then((result) => {
+    courseModel.getCourses(req.body).then((result) => {
+        console.log(result)
         res.status(200).send({
             status: "success",
             courses: result
@@ -32,7 +72,6 @@ exports.getCourses = (req, res) => {
     })
     return;
 }
-
 
 exports.getCourseById = (req, res) => {
     console.log(req.query.id)
@@ -106,3 +145,9 @@ exports.deleteCourse = (req, res) => {
     })
     return;
 }
+
+
+//filter
+// 1) Category
+// 2) Charges
+// 3) Country
