@@ -40,7 +40,7 @@ exports.getCourseById = (req, res) => {
         console.log(result)
         res.status(200).send({
             status: "success",
-            user: result
+            course: result
         })
     }).catch((error) => {
         console.log(error)
@@ -59,7 +59,7 @@ exports.getCourseByTutorId = (req, res) => {
         console.log(result)
         res.status(200).send({
             status: "success",
-            user: result
+            courses: result
         })
     }).catch((error) => {
         console.log(error)
@@ -77,7 +77,7 @@ exports.updateCourse = (req, res) => {
     courseModel.updateCourse(req.body).then((result) => {
         res.status(200).send({
             status: "success",
-            user: result
+            course: result
         })
     }).catch((error) => {
         console.log(error)
@@ -95,7 +95,7 @@ exports.deleteCourse = (req, res) => {
     courseModel.deleteCourse(req.query.id).then((result) => {
         res.status(200).send({
             status: "success",
-            user: result
+            course: result
         })
     }).catch((error) => {
         console.log(error)
