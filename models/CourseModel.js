@@ -11,6 +11,7 @@ const courseSchema = new mongoose.Schema({
     charge_per_hour: Number,
     status: String,
     tutor_id: String,
+    images: [String],
     video_link: String,
     time_slot: [Object]    
 })
