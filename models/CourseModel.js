@@ -1,6 +1,4 @@
 const mongoose = require('../utils/moongoseConfig').mongoose;
-const userModel = require('../models/UserModel')
-
 
 const courseSchema = new mongoose.Schema({
     title: String,
