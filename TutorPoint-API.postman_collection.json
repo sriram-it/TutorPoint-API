@@ -363,6 +363,235 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Enrollments",
+			"item": [
+				{
+					"name": "createEnrollment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\": \"\",\r\n    \"student_id\": \"\",\r\n    \"tutor_id\": \"\",\r\n    \"hours_completed\": 10,\r\n    \"status\": \"Requested\",\r\n    \"student_rating\": 4.4,\r\n    \"student_comment\": \"Worth to take the course, really helpful\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/createEnrollment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"createEnrollment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/getEnrollments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"getEnrollments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/getEnrollment?id=607e274975ad641ec8913dd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"getEnrollment"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "607e274975ad641ec8913dd3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEnrollment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"_id\": \"607e274975ad641ec8913dd3\",\r\n            \"course_id\": \"\",\r\n            \"student_id\": \"\",\r\n            \"tutor_id\": \"\",\r\n            \"hours_completed\": 10,\r\n            \"status\": \"Completed\",\r\n            \"student_rating\": 4.4,\r\n            \"student_comment\": \"Worth to take the course, really helpful\",\r\n            \"__v\": 0\r\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/updateEnrollment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"updateEnrollment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEnrollment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/deleteEnrollment?id=607e274975ad641ec8913dd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"deleteEnrollment"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "607e274975ad641ec8913dd3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollmentByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/getEnrollmentByStudent?studentId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"getEnrollmentByStudent"
+							],
+							"query": [
+								{
+									"key": "studentId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollmentByTutor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/getEnrollmentByTutor?tutorId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"getEnrollmentByTutor"
+							],
+							"query": [
+								{
+									"key": "tutorId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnrollmentByCourse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tutorPoint/api/getEnrollmentByCourse?courseId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tutorPoint",
+								"api",
+								"getEnrollmentByCourse"
+							],
+							"query": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
