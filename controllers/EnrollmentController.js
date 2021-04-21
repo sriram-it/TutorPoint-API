@@ -5,7 +5,7 @@ exports.createEnrollment = (req, res) => {
     enrollmentModel.createEnrollment(req.body).then((result) => {
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -21,7 +21,7 @@ exports.getEnrollments = (req, res) => {
     enrollmentModel.getAll().then((result) => {
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -39,7 +39,7 @@ exports.getEnrollmentById = (req, res) => {
         console.log(result)
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -57,7 +57,7 @@ exports.getEnrollmentByStudent = (req, res) => {
         console.log(result)
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -76,7 +76,7 @@ exports.getEnrollmentByTutor = (req, res) => {
         console.log(result)
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -94,7 +94,7 @@ exports.getEnrollmentByCourse = (req, res) => {
         console.log(result)
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -111,7 +111,7 @@ exports.updateEnrollment = (req, res) => {
     enrollmentModel.updateEnrollment(req.body).then((result) => {
         res.status(200).send({
             status: "success",
-            user: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)
@@ -128,7 +128,7 @@ exports.deleteEnrollment = (req, res) => {
     enrollmentModel.deleteEnrollment(req.query.id).then((result) => {
         res.status(200).send({
             status: "success",
-            course: result
+            enrollment: result
         })
     }).catch((error) => {
         console.log(error)

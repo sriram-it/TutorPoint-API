@@ -2,9 +2,9 @@ const mongoose = require('../utils/moongoseConfig').mongoose;
 
 
 const enrollmentSchema = new mongoose.Schema({
-    course_id: String,
-    student_id: String,
-    tutor_id: String,
+    course_id: {type: mongoose.Schema.Types.ObjectId, ref: 'courses'},
+    student_id: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
+    tutor_id: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
     hours_completed: Number,
     status: String,
     student_rating: Number,
@@ -19,24 +19,23 @@ exports.createEnrollment = (enrollmentData) => {
 }
 
 exports.getAll = () => {
-    return enrollmentModel.find();
+    return enrollmentModel.find().populate('course_id').populate('student_id').populate('tutor_id');
 }
 
 exports.getEnrollmentById = (id) => {
-   // return userModel.findById(id);
-   return enrollmentModel.find({_id: id})
+   return enrollmentModel.find({_id: id}).populate('course_id').populate('student_id').populate('tutor_id');
 }
 
 exports.getEnrollmentByStudent = (studentId) => {
-    return enrollmentModel.find({student_id: studentId})
+    return enrollmentModel.find({student_id: studentId}).populate('course_id').populate('student_id').populate('tutor_id');
 }
 
 exports.getEnrollmentByTutor = (tutorId) => {
-    return enrollmentModel.find({tutor_id: tutorId})
+    return enrollmentModel.find({tutor_id: tutorId}).populate('course_id').populate('student_id').populate('tutor_id');
 }
 
 exports.getEnrollmentByCourse = (courseId) => {
-    return enrollmentModel.find({course_id: courseId})
+    return enrollmentModel.find({course_id: courseId}).populate('course_id').populate('student_id').populate('tutor_id');
 }
 
 exports.updateEnrollment = (enrollmentData) =>  {
