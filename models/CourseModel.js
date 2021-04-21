@@ -8,7 +8,7 @@ const courseSchema = new mongoose.Schema({
     students_capacity: Number,
     charge_per_hour: Number,
     status: String,
-    tutor_id: String,
+    tutor_id: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
     images: [String],
     video_link: String,
     time_slot: [Object]    
@@ -79,13 +79,13 @@ exports.createCourse = (courseData) => {
 exports.getCourses = (filterData) => {
     console.log(filterData)
     if(filterData.category != "" && filterData.fromPrice != "" && filterData.toPrice != "") {
-        return courseModel.find({category: filterData.category, charge_per_hour: {$gte: filterData.fromPrice, $lte: filterData.toPrice}})
+        return courseModel.find({category: filterData.category, charge_per_hour: {$gte: filterData.fromPrice, $lte: filterData.toPrice}}).populate('tutor_id')
     }else if(filterData.category != "") {
-        return courseModel.find({category: filterData.category})
+        return courseModel.find({category: filterData.category}).populate('tutor_id')
     }else if(filterData.fromPrice != "" && filterData.toPrice != "") {
-        return courseModel.find({charge_per_hour: {$gte: filterData.fromPrice, $lte: filterData.toPrice}})
+        return courseModel.find({charge_per_hour: {$gte: filterData.fromPrice, $lte: filterData.toPrice}}).populate('tutor_id')
     }else {
-        return courseModel.find();
+        return courseModel.find().populate('tutor_id')
     }
 }
 
