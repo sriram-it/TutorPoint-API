@@ -383,12 +383,13 @@
 							"raw": "{\r\n    \"course_id\": \"\",\r\n    \"student_id\": \"\",\r\n    \"tutor_id\": \"\",\r\n    \"hours_completed\": 10,\r\n    \"status\": \"Requested\",\r\n    \"student_rating\": 4.4,\r\n    \"student_comment\": \"Worth to take the course, really helpful\"\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/createEnrollment",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/createEnrollment",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -404,12 +405,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/getEnrollments",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getEnrollments",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -425,12 +427,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/getEnrollment?id=607e274975ad641ec8913dd3",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getEnrollment?id=607e274975ad641ec8913dd3",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -468,12 +471,13 @@
 							"raw": "{\r\n            \"_id\": \"607e274975ad641ec8913dd3\",\r\n            \"course_id\": \"\",\r\n            \"student_id\": \"\",\r\n            \"tutor_id\": \"\",\r\n            \"hours_completed\": 10,\r\n            \"status\": \"Completed\",\r\n            \"student_rating\": 4.4,\r\n            \"student_comment\": \"Worth to take the course, really helpful\",\r\n            \"__v\": 0\r\n        }"
 						},
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/updateEnrollment",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/updateEnrollment",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -489,12 +493,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/deleteEnrollment?id=607e274975ad641ec8913dd3",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/deleteEnrollment?id=607e274975ad641ec8913dd3",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -516,12 +521,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/getEnrollmentByStudent?studentId=3",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getEnrollmentByStudent?studentId=607d45780b47ad002285bf3a",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -530,7 +536,7 @@
 							"query": [
 								{
 									"key": "studentId",
-									"value": "3"
+									"value": "607d45780b47ad002285bf3a"
 								}
 							]
 						}
@@ -543,12 +549,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/getEnrollmentByTutor?tutorId=1",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getEnrollmentByTutor?tutorId=607bad1a4c449a00223fd8a8",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -557,7 +564,7 @@
 							"query": [
 								{
 									"key": "tutorId",
-									"value": "1"
+									"value": "607bad1a4c449a00223fd8a8"
 								}
 							]
 						}
@@ -570,12 +577,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tutorPoint/api/getEnrollmentByCourse?courseId=1",
-							"protocol": "http",
+							"raw": "https://tutor-point-api.herokuapp.com/tutorPoint/api/getEnrollmentByCourse?courseId=607ce62a6670c20022b04eb3",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"tutor-point-api",
+								"herokuapp",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"tutorPoint",
 								"api",
@@ -584,7 +592,7 @@
 							"query": [
 								{
 									"key": "courseId",
-									"value": "1"
+									"value": "607ce62a6670c20022b04eb3"
 								}
 							]
 						}
